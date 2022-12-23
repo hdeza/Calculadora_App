@@ -13,10 +13,9 @@ class CalculadoraScreen extends StatefulWidget {
 class _CalculadoraScreenState extends State<CalculadoraScreen> {
   String dato = '0';
 
-  void contar() {
+  void reset() {
     setState(() {
-      double valor = double.parse(dato) + 1;
-      dato = '$valor';
+      dato = '0';
     });
   }
 
@@ -24,6 +23,26 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
     setState(() {
       double valor = double.parse(dato) * 0.01;
       dato = '$valor';
+    });
+  }
+
+  void delete() {
+    setState(() {
+      var valor = double.parse(dato);
+      valor = valor * 0.1;
+      int nuevo = valor.toInt();
+      nuevo.truncate();
+      dato = '$nuevo';
+    });
+  }
+
+  void numeros(String num) {
+    setState(() {
+      if (dato != '0') {
+        dato = '$dato$num';
+      } else {
+        dato = num;
+      }
     });
   }
 
@@ -79,8 +98,10 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
                       Color.fromARGB(255, 6, 134, 208),
                     ])),
                 child: CustomBottoms(
-                  contar: contar,
+                  reset: reset,
                   porcent: porcent,
+                  delete: delete,
+                  numeros: numeros,
                 )),
           )
         ],
