@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +16,13 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
   void contar() {
     setState(() {
       double valor = double.parse(dato) + 1;
+      dato = '$valor';
+    });
+  }
+
+  void porcent() {
+    setState(() {
+      double valor = double.parse(dato) * 0.01;
       dato = '$valor';
     });
   }
@@ -49,9 +54,17 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
               children: [
                 const Text(
                   '  =',
-                  style: TextStyle(fontSize: 50),
+                  style: TextStyle(fontSize: 40),
                 ),
-                Text(dato, style: const TextStyle(fontSize: 50)),
+                const SizedBox(
+                  width: 10,
+                ),
+                Flexible(
+                    child: Text(
+                  dato,
+                  style: const TextStyle(fontSize: 40),
+                  maxLines: 2,
+                )),
               ],
             ),
           ),
@@ -67,6 +80,7 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
                     ])),
                 child: CustomBottoms(
                   contar: contar,
+                  porcent: porcent,
                 )),
           )
         ],
