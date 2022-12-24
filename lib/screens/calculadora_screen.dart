@@ -92,43 +92,62 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Calculadora Básica'),
-        centerTitle: true,
-        elevation: 0,
-        backgroundColor: const Color.fromARGB(255, 6, 134, 208),
-      ),
+      // appBar: AppBar(
+      //   title: const Text('Calculadora Básica By Armando Hdeza',
+      //       style: TextStyle(fontWeight: FontWeight.bold)),
+      //   centerTitle: true,
+      //   elevation: 0,
+      //   backgroundColor: Color.fromARGB(255, 30, 1, 90),
+      // ),
       body: Column(
         children: [
-          Container(
-            height: 200,
-            decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.centerLeft,
-                    end: Alignment.centerRight,
-                    colors: <Color>[
-                      Color.fromARGB(255, 81, 200, 233),
-                      Color.fromARGB(255, 6, 134, 208),
-                    ]),
-                border: Border(bottom: BorderSide(color: Colors.white))),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text(
-                  '  =',
-                  style: TextStyle(fontSize: 30),
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Flexible(
-                    child: Text(
-                  dato,
-                  style: const TextStyle(fontSize: 40),
-                  maxLines: 2,
+          Column(
+            children: [
+              SizedBox(
+                height: 100,
+                child: Container(
+                    decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                      colors: <Color>[
+                        Color.fromARGB(255, 76, 39, 151),
+                        Color.fromARGB(255, 20, 6, 208),
+                      ]),
                 )),
-              ],
-            ),
+              ),
+              Container(
+                height: 250,
+                decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                        colors: <Color>[
+                          Color.fromARGB(255, 76, 39, 151),
+                          Color.fromARGB(255, 20, 6, 208),
+                        ]),
+                    border: Border(
+                        bottom: BorderSide(color: Colors.white, width: 0.5))),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      '  =',
+                      style: TextStyle(fontSize: 30, color: Colors.white),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Flexible(
+                        child: Text(
+                      '$dato ',
+                      style: const TextStyle(fontSize: 40, color: Colors.white),
+                      maxLines: 2,
+                    )),
+                  ],
+                ),
+              ),
+            ],
           ),
           Expanded(
             child: Container(
@@ -137,8 +156,8 @@ class _CalculadoraScreenState extends State<CalculadoraScreen> {
                         begin: Alignment.centerLeft,
                         end: Alignment.centerRight,
                         colors: <Color>[
-                      Color.fromARGB(255, 81, 200, 233),
-                      Color.fromARGB(255, 6, 134, 208),
+                      Color.fromARGB(255, 76, 39, 151),
+                      Color.fromARGB(255, 20, 6, 208),
                     ])),
                 child: CustomBottoms(
                   reset: reset,

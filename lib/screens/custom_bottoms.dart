@@ -27,19 +27,23 @@ class CustomBottoms extends StatelessWidget {
           children: [
             FloatingActionButton(
               onPressed: () => reset(),
-              child: const Text('AC'),
+              backgroundColor: Colors.blueAccent.shade100,
+              child: const Text('AC', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => porcent(),
-              child: const Text('%'),
+              backgroundColor: Colors.blueAccent.shade100,
+              child: const Text('%', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => delete(),
-              child: Icon(Icons.arrow_back),
+              backgroundColor: Colors.blueAccent.shade100,
+              child: const Icon(Icons.arrow_back),
             ),
             FloatingActionButton(
               onPressed: () => operacion('/'),
-              child: const Text('/'),
+              backgroundColor: Colors.blueAccent.shade100,
+              child: const Text('/', style: TextStyle(fontSize: 25)),
             ),
           ],
         ),
@@ -51,19 +55,29 @@ class CustomBottoms extends StatelessWidget {
           children: [
             FloatingActionButton(
               onPressed: () => numeros('7'),
-              child: const Text('7'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text(
+                '7',
+                style: TextStyle(fontSize: 25),
+              ),
             ),
             FloatingActionButton(
               onPressed: () => numeros('8'),
-              child: const Text('8'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text(
+                '8',
+                style: TextStyle(fontSize: 25),
+              ),
             ),
             FloatingActionButton(
               onPressed: () => numeros('9'),
-              child: const Text('9'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('9', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => operacion('X'),
-              child: const Text('X'),
+              backgroundColor: Colors.blueAccent.shade100,
+              child: const Text('X', style: TextStyle(fontSize: 25)),
             ),
           ],
         ),
@@ -75,19 +89,23 @@ class CustomBottoms extends StatelessWidget {
           children: [
             FloatingActionButton(
               onPressed: () => numeros('4'),
-              child: const Text('4'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('4', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => numeros('5'),
-              child: const Text('5'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('5', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => numeros('6'),
-              child: const Text('6'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('6', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => operacion('-'),
-              child: const Text('-'),
+              backgroundColor: Colors.blueAccent.shade100,
+              child: const Text('-', style: TextStyle(fontSize: 35)),
             ),
           ],
         ),
@@ -99,19 +117,23 @@ class CustomBottoms extends StatelessWidget {
           children: [
             FloatingActionButton(
               onPressed: () => numeros('1'),
-              child: const Text('1'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('1', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => numeros('2'),
-              child: const Text('2'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('2', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => numeros('3'),
-              child: const Text('3'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('3', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => operacion('+'),
-              child: const Text('+'),
+              backgroundColor: Colors.blueAccent.shade100,
+              child: const Text('+', style: TextStyle(fontSize: 30)),
             ),
           ],
         ),
@@ -123,19 +145,22 @@ class CustomBottoms extends StatelessWidget {
           children: [
             const FloatingActionButton(
               onPressed: null,
-              child: Text('N'),
+              child: Icon(Icons.calculate_outlined, size: 30),
             ),
             FloatingActionButton(
               onPressed: () => numeros('0'),
-              child: const Text('0'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('0', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => numeros('.'),
-              child: const Text('.'),
+              backgroundColor: Colors.blueAccent.shade700,
+              child: const Text('.', style: TextStyle(fontSize: 25)),
             ),
             FloatingActionButton(
               onPressed: () => operacion('='),
-              child: const Text('='),
+              backgroundColor: Colors.amber.shade600,
+              child: const Text('=', style: TextStyle(fontSize: 40)),
             ),
           ],
         )
