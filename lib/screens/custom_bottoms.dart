@@ -5,12 +5,14 @@ class CustomBottoms extends StatelessWidget {
   final Function delete;
   final Function porcent;
   final Function numeros;
+  final Function operacion;
   const CustomBottoms(
       {Key? key,
       required this.porcent,
       required this.delete,
       required this.numeros,
-      required this.reset})
+      required this.reset,
+      required this.operacion})
       : super(key: key);
 
   @override
@@ -36,8 +38,8 @@ class CustomBottoms extends StatelessWidget {
               child: Icon(Icons.arrow_back),
             ),
             FloatingActionButton(
-              onPressed: null,
-              child: Text('/'),
+              onPressed: () => operacion('/'),
+              child: const Text('/'),
             ),
           ],
         ),
@@ -60,8 +62,8 @@ class CustomBottoms extends StatelessWidget {
               child: const Text('9'),
             ),
             FloatingActionButton(
-              onPressed: null,
-              child: Text('X'),
+              onPressed: () => operacion('X'),
+              child: const Text('X'),
             ),
           ],
         ),
@@ -84,8 +86,8 @@ class CustomBottoms extends StatelessWidget {
               child: const Text('6'),
             ),
             FloatingActionButton(
-              onPressed: null,
-              child: Text('-'),
+              onPressed: () => operacion('-'),
+              child: const Text('-'),
             ),
           ],
         ),
@@ -108,8 +110,8 @@ class CustomBottoms extends StatelessWidget {
               child: const Text('3'),
             ),
             FloatingActionButton(
-              onPressed: null,
-              child: Text('+'),
+              onPressed: () => operacion('+'),
+              child: const Text('+'),
             ),
           ],
         ),
@@ -119,9 +121,9 @@ class CustomBottoms extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            FloatingActionButton(
+            const FloatingActionButton(
               onPressed: null,
-              child: const Text('N'),
+              child: Text('N'),
             ),
             FloatingActionButton(
               onPressed: () => numeros('0'),
@@ -132,8 +134,8 @@ class CustomBottoms extends StatelessWidget {
               child: const Text('.'),
             ),
             FloatingActionButton(
-              onPressed: null,
-              child: Text('='),
+              onPressed: () => operacion('='),
+              child: const Text('='),
             ),
           ],
         )
