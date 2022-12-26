@@ -1,16 +1,34 @@
-# counter_other
+# App de Calculadora
 
-A new Flutter project.
+**Proyecto desarrollado en flutter**
 
-## Getting Started
+## Características
 
-This project is a starting point for a Flutter application.
+### Calculadora Básica
 
-A few resources to get you started if this is your first Flutter project:
+#### Permite:
+  - Sumar, restar, multiplicar y dividir dos números.
+  - Hacer operaciones con decimales.
+  - Borrar número por número.
+  - Limpiar los datos (Resetear).
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Forma de desarrollado
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+El código fue desarrollado de manera simple, usando **StatelessWidget** y **StatefullWidget**,
+no se implementó ningún gestor de estado en específico como Bloc, provider o GetX. Por otro lado,
+se hizo uso de programación orientada a objetos con el fin de darle un mejor orden y un manteniemiento
+adecuado a los datos (números).
+
+## Imagenes del uso de la aplicación
+
+![Imagen del código junto a una ejecución de la aplicación](https://user-images.githubusercontent.com/91811906/209579907-c3ed571e-505c-4ef6-bcc8-31054809274d.jpeg)
+
+### Aplicación funcionando en el emulador
+![Aplicación en el emulador](https://user-images.githubusercontent.com/91811906/209580004-4bd1f0fa-9fe2-4404-9950-42bcdf54b517.jpeg)
+
+### Aplicación funcionando en un dispositivo físico (Redmi Note 9)
+![Aplicación funcionando en dispositivo físico](https://user-images.githubusercontent.com/91811906/209580056-d0100cb3-df9e-4d8a-9f0f-83220f58b242.jpeg) 
+![Aplicación funcionando en dispositivo físico](https://user-images.githubusercontent.com/91811906/209580165-402620e3-6fec-4a03-b41e-d9930f027eea.jpeg)
+
+
+
