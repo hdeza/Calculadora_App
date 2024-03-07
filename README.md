@@ -12,7 +12,7 @@
   - Borrar número por número.
   - Limpiar los datos (Resetear).
 
-## Forma de desarrollado
+## Forma de desarrollo
 
 El código fue desarrollado de manera simple, usando **StatelessWidget** y **StatefullWidget**,
 no se implementó ningún gestor de estado en específico como Bloc, provider o GetX. Por otro lado,
